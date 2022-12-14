@@ -1,0 +1,17 @@
+# A quick comprehension test of f-strings with some CRRRAZZZZYYYYY results
+
+
+#ask user to input 2 nouns and two 2 adjectives to make the madlib an incomprehensible mess
+noun1 = input("Noun: ")
+noun2 = input("Noun: ")
+adj1 = input ("adjective: ")
+adj2 = input ("adjective: ")
+
+
+#the string that the nouns and adjectives are added to as per their 'placeholders'
+
+madlib = f"I used the {noun1} to clean the toilet after my {adj1} {noun2}. Safe to\
+ say, the inlaws were {adj2}."
+
+#finally, we print the madlib with added inputs, to much hilarity
+print(madlib)
