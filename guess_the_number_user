@@ -1,0 +1,27 @@
+#to use random numbers, we need to import random
+
+import random
+
+#define the guess funtion
+def guess(x):
+# create the random number variable
+
+    random_number = random.randint(1,x)
+#set the guess to '0' so that we start outside of scope    
+    guess = 0
+#start the guessing game with user input
+
+    while guess != random_number:
+        guess = int(input(f"Guess a number between 1 and {x}: "))
+        
+#create a while/if loop so if too high or too low, you can guess again with a clue        
+        if guess < random_number:
+            print ("Sorry, you came in low. Guess again")            
+        elif guess > random_number:
+            print ("Nope, you're too high this time. Try again.")
+            
+#print congrats when guessed correctly
+    print(f"Well done, you guessed the random number {random_number}")
+
+#define the upper limit of numbers to guess by defining x from guess function
+guess(10)
