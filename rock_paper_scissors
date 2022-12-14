@@ -1,0 +1,25 @@
+# need computer to choose a random choice thus..
+import random
+
+#define the play function to get the user and computer choices
+def play():
+    user = input ("'r' for Rock, 's' for scissors, 'p' for paper")
+    computer = random.choice(['r','p','s'])
+
+#add condition for draw
+    if user == computer:
+        return 'tie'
+
+#add condition for user win from 'winner' function (defined line 20)
+    if winner(user, computer):
+        return 'you win!'
+
+#as all other options now exhausted, we can return 'you lose' as computer has won
+    return 'you lose!'
+
+#define how the user will win 'rock beats scissors beats paper beats rock'
+def winner(player, opponent):
+    if(player == 'r' and opponent == 's')or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
+        return True
+    
+print(play())
